@@ -4,7 +4,7 @@
    angular.module('movieapp')
       .component('app', {
          controller: controller,
-         templateUrl: '/app/app_component.html'
+         templateUrl: '/app/app-component.html'
       });
 
    controller.$inject = ['$http'];
