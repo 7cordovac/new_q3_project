@@ -8,15 +8,15 @@
       });
 
    controller.$inject = ['$http'];
-
    function controller($http) {
       var vm = this;
 
       vm.$onInit = onInit;
 
       function onInit() {
-          console.log("we are in the main app component");
+          console.log("we are in the main app.component.js");
 
    }
+
 }
 }());

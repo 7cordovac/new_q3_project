@@ -1,3 +1,80 @@
-<div> 
-   This is the movies component !!! Movie !
+<div>
+   HELLO!! MOVIES COMPONENT HTML !!! Movie !
+
+
+<h1>Movies!</h1>
+   <div class="container">
+      <div class="row top-buffer">
+         <div class="col-xs-8 col-xs-offset-2">
+            <ui-view></ui-view> <!-- This is where our views will load -->
+         </div>
+      </div>
+   </div>
+
+   <form ng-submit="">
+   <!-- <form ng-submit="exec(‘search’, ‘movie’, query)"> -->
+
+
+     <input type="text" ng-model="query">
+     <button type="submit">Search Movie</button>
+  </form>
+
+  <div>
+     <ul>
+        <li ng-repeat="movie in movies">
+           <a ui-sref= "movieDetails({id:movie})">
+             {{movie.name}}    {{searchResults}}
+         </a>
+      </li>
+   </ul>
+
+
+
+   </div>
+
 </div>
+
+<!--send requst goes to https://api.themoviedb.org/3/authentication/token/new?api_key=<<b7cf8bed2eaf0d01e4db550d15a0e134"-->
+
+<!-- var data = "{}";
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === this.DONE) {
+    console.log(this.responseText);
+  }
+}); -->
+
+
+<!--https://api.themoviedb.org/3/authentication/session/new?api_key=<<b7cf8bed2eaf0d01e4db550d15a0e134
+
+var data = "{}";
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === this.DONE) {
+    console.log(this.responseText);
+  }
+});
+
+SEARCH FOR movies
+https://api.themoviedb.org/3/search/movie?api_key=<<b7cf8bed2eaf0d01e4db550d15a0e134">>&language=en-US&page=1&include_adult=false
+
+var data = "{}";
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === this.DONE) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("GET", "https://api.themoviedb.org/3/search/movie?include_adult=false&page=1&language=en-US&api_key=%3C%3Capi_key%3E%3E");
+
+xhr.send(data);  -->

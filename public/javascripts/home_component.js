@@ -2,7 +2,7 @@
    'use strict';
 
    angular.module('movieapp')
-      .component('home_component', {
+      .component('homeComponent', {
          controller: controller,
          templateUrl: '/app/home_component.html'
       });
@@ -15,8 +15,7 @@
       vm.$onInit = onInit;
 
       function onInit() {
-          console.log("we are in the home component");
-
-   }
-}
+          console.log("we are in the home.component.js");
+       }
+    }
 }());

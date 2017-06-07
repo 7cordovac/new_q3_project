@@ -18,18 +18,35 @@
       name: 'app',
       abstract: true,
       component: 'app',
+
     })
-    .state('app.home', {
+    .state('home', {
+      parent: 'app',
       url: '/',
-      component: 'home_component',
+      // templateUrl: 'app/home_component.html',
+      component: 'homeComponent',
     })
-    .state('app.movies', {
+
+    .state('movies', {
+      parent: 'app',
       url: '/movies',
-      component: 'movies_component',
+      // templateUrl: 'app/movies_component.html',
+      component: 'moviesComponent',
+
     })
+
+    .state('movieDetails', {
+      parent: 'app',
+      url: '/movieDetails/:id',
+   //   templateUrl: 'movies_component.html',
+      component: 'movieDetails_component',
+
+    })
+
+
     .state('error', {
       url: '/error',
-      componentUrl: 'app/error.html',
+      component: 'app/error.html',
     });
   }
 
