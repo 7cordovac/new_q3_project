@@ -39,10 +39,9 @@
       parent: 'app',
       url: '/movieDetails/:id',
    //   templateUrl: 'movies_component.html',
-      component: 'movieDetails_component',
+      component: 'movieDetailsComponent',
 
     })
-
 
     .state('error', {
       url: '/error',
